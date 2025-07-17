@@ -34,6 +34,7 @@ jobs:
       run: |
         echo "SIGNIN_USERNAME=${{ secrets.SIGNIN_USERNAME }}" > .env
         echo "SIGNIN_PASSWORD=${{ secrets.SIGNIN_PASSWORD }}" >> .env
+        echo "SENDKEY=${{ secrets.SENDKEY }}" >> .env
     
     - name: Run sign-in script
       run: python auto_signin.py
