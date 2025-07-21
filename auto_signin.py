@@ -140,7 +140,6 @@ class AutoSignIn:
             
             logging.info("登录成功")
             time.sleep(5)  # 等待登录完成
-            self.send_signin_notification("自动签到通知", "登录成功！")
             
         except Exception as e:
             logging.error(f"登录失败: {str(e)}")
@@ -172,7 +171,6 @@ class AutoSignIn:
             # 签到后截图
             screenshot_path = self.take_screenshot("after_signin")
             logging.info(f"签到结果已截图保存: {screenshot_path}")
-            self.send_signin_notification("自动签到通知", "签到成功！")
             
         except Exception as e:
             logging.error(f"签到失败: {str(e)}")
